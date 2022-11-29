@@ -54,6 +54,7 @@ export function AppContextProvider({ children }) {
         removeItem,
         increaseAmount,
         decreaseAmount,
+        fetchCart,
       }}
     >
       {children}
