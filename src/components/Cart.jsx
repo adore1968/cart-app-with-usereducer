@@ -1,4 +1,3 @@
-import React from "react";
 import { useGlobalContext } from "../context/AppContext";
 import Item from "./Item";
 import Loading from "./Loading";
@@ -30,21 +29,21 @@ font-bold"
   }
 
   return (
-    <div className=" container sm:max-w-4xl text-white">
-      <h1 className="text-center text-2xl sm:text-4xl font-bold">Your Bag</h1>
-      <div className="py-5">
+    <div>
+      <h2 className="text-center text-3xl sm:text-4xl font-bold">Your Bag</h2>
+      <div className="my-5 flex flex-col gap-5">
         {cart.map((item) => {
           return <Item key={item.id} item={item} />;
         })}
       </div>
-      <div className="flex justify-between items-center pt-4 border-t text-lg sm:text-xl font-semibold">
-        <p>Total</p>
-        <p>${total}</p>
+      <div className="flex justify-between items-center pt-5 border-t">
+        <p className="text-xl sm:text-2xl font-medium">Total</p>
+        <p className="text-lg sm:text-xl text-gray-200">${total}</p>
       </div>
-      <div className="text-center mt-10 text-red-600 text-lg sm:text-xl">
+      <div className="text-center mt-5">
         <button
           onClick={() => clearCart()}
-          className="uppercase border border-red-600 py-1 px-4 rounded hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors "
+          className="uppercase text-lg sm:text-xl border border-red-600 py-2 px-4 rounded hover:bg-red-500 transition-colors ease-in"
         >
           Clear Cart
         </button>
