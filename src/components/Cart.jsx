@@ -11,15 +11,15 @@ function Cart() {
 
   if (cart.length < 1) {
     return (
-      <div className="text-center text-white ">
+      <div className="text-center">
         <h1
-          className="mb-5 text-2xl sm:text-4xl
+          className="mb-5 text-3xl sm:text-4xl
 font-bold"
         >
           The cart is empty
         </h1>
         <button
-          className="text-lg sm:text-xl text-red-600 border-red-600 border py-1 px-4 rounded inline-block hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
+          className="text-lg sm:text-xl border border-red-600 py-2 px-4 rounded hover:bg-red-500 transition-colors ease-in inline-block uppercase"
           onClick={() => fetchCart()}
         >
           Refresh?
@@ -43,7 +43,7 @@ font-bold"
       <div className="text-center mt-5">
         <button
           onClick={() => clearCart()}
-          className="uppercase text-lg sm:text-xl border border-red-600 py-2 px-4 rounded hover:bg-red-500 transition-colors ease-in"
+          className="uppercase text-lg sm:text-xl border border-red-600 py-2 px-4 rounded hover:bg-red-500 transition-colors ease-in inline-block"
         >
           Clear Cart
         </button>
